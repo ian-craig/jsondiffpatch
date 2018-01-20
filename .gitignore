@@ -13,7 +13,6 @@ pids
 logs
 results
 coverage
+dist
 
 npm-debug.log
-
-gh-pages

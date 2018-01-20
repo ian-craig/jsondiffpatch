@@ -1,0 +1,14 @@
+instrumentation:
+  root: src
+  extensions: ['.js']
+  excludes:
+    - 'public/**.js'
+    - 'dist/**.js'
+    - 'test/**.js'
+  include-all-sources: true
+check:
+  global:
+    statements: 40
+    lines: 40
+    branches: 40
+    functions: 40
