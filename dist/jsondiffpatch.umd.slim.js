@@ -1,11 +1,10 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('diff-match-patch'), require('chalk')) :
-	typeof define === 'function' && define.amd ? define(['exports', 'diff-match-patch', 'chalk'], factory) :
-	(factory((global.jsondiffpatch = {}),global.dmp,global.chalk));
-}(this, (function (exports,dmp,chalk) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('diff-match-patch')) :
+	typeof define === 'function' && define.amd ? define(['exports', 'diff-match-patch'], factory) :
+	(factory((global.jsondiffpatch = {}),global.dmp));
+}(this, (function (exports,dmp) { 'use strict';
 
 dmp = dmp && dmp.hasOwnProperty('default') ? dmp['default'] : dmp;
-chalk = chalk && chalk.hasOwnProperty('default') ? chalk['default'] : chalk;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
   return typeof obj;
@@ -2416,7 +2415,7 @@ var jsonpatch = Object.freeze({
 });
 
 function chalkColor(name) {
-  return chalk && chalk[name] || function () {
+  return function () {
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }

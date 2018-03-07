@@ -5,7 +5,6 @@ Object.defineProperty(exports, '__esModule', { value: true });
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
 var dmp = _interopDefault(require('diff-match-patch'));
-var chalk = _interopDefault(require('chalk'));
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
   return typeof obj;
@@ -2416,7 +2415,7 @@ var jsonpatch = Object.freeze({
 });
 
 function chalkColor(name) {
-  return chalk && chalk[name] || function () {
+  return function () {
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }

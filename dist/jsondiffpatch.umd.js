@@ -1,10 +1,8 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('chalk')) :
-	typeof define === 'function' && define.amd ? define(['exports', 'chalk'], factory) :
-	(factory((global.jsondiffpatch = {}),global.chalk));
-}(this, (function (exports,chalk) { 'use strict';
-
-chalk = chalk && chalk.hasOwnProperty('default') ? chalk['default'] : chalk;
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+	typeof define === 'function' && define.amd ? define(['exports'], factory) :
+	(factory((global.jsondiffpatch = {})));
+}(this, (function (exports) { 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
   return typeof obj;
@@ -4568,7 +4566,7 @@ var jsonpatch = Object.freeze({
 });
 
 function chalkColor(name) {
-  return chalk && chalk[name] || function () {
+  return function () {
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }

@@ -1,13 +1,9 @@
-import chalk from 'chalk';
 import BaseFormatter from './base';
 
 function chalkColor(name) {
-  return (
-    (chalk && chalk[name]) ||
-    function(...args) {
-      return args;
-    }
-  );
+  return function (...args) {
+    return args;
+  };
 }
 
 let colors = {
